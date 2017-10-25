@@ -1,0 +1,9 @@
+#gamewindow{
+width: 970px;
+background-color: black;
+border: 5px solid grey;
+height: 100px;
+
+
+
+}

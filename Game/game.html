@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="game.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $('#beach').hover(function(){
+                    $('#gamewindow').css( "background-image", "url(img/beach.jpg)");},
+                    function(){
+                        $('#gamewindow').css("background-image", "none");
+                    }
+                    
+                );
+                $('#planet').hover(function(){
+                    $('#gamewindow').css( "background-image", "url(img/earth.jpg)");},
+                    function(){
+                        $('#gamewindow').css("background-image", "none");
+                    })
+
+                $('#dojo').hover(function(){
+                $('#gamewindow').css( "background-image", "url(img/dojo.jpg)");},
+                function(){
+                    $('#gamewindow').css("background-image", "none");
+                })
+
+                $('#forest').hover(function(){
+                $('#gamewindow').css( "background-image", "url(img/forest.jpg)");},
+                function(){
+                    $('#gamewindow').css("background-image", "none");
+                })
+
+                $('#matrix').hover(function(){
+                $('#gamewindow').css( "background-image", "url(img/matrix.jpg)");},
+                function(){
+                    $('#gamewindow').css("background-image", "none");
+                })
+
+                $('#snow').hover(function(){
+                $('#gamewindow').css( "background-image", "url(img/snow.jpg)");},
+                function(){
+                    $('#gamewindow').css("background-image", "none");
+                })
+
+
+
+
+                $('button').click(function(){
+                    $('#gamewindow').find(this).unbind('mouseleave');
+                    $('#arena').html("<h3>Select Players</h3>")                  
+                    $('#left').show();
+                    $('#right').show();
+                    
+                   });
+
+
+
+
+            $(document).on('change', '#left', function(){ 
+                var link= $(this).val();
+                $('#div1').show();
+               $('#div1').attr("src", link);
+             
+            })
+
+            $(document).on('change', '#right', function(){ 
+                var link2= $(this).val();
+                $('#div2').show();
+                $('#div2').attr("src", link2);
+               
+             
+            })
+             
+             /*var test= $('option').click(function(){
+                    $(this).val();
+
+               });
+                var mikey = $('option').val();
+                var raphael= $('option').val();
+                var leo = "url(img/leo.png)";
+                var donny = "url(img/donny.png)";
+                
+            
+
+                console.log(test);
+                $('#right').show();
+                $('#left').show();
+                
+              
+
+            */
+
+         
+
+            });
+        
+        
+        
+        
+        
+        </script>
+
+
+
+
+
+    </head>
+    <body>
+            
+        <div id="gamewindow" >
+            
+            <div id="mainarena">
+                <div id="arena">
+                    <h3>Select Arena</h3>
+                    <button id="beach">beach</button>
+                    <button id="planet">planet</button>
+                    <button id="dojo">dojo</button>
+                    <button id="forest">forest</button>
+                    <button id="matrix">matrix</button>
+                    <button id="snow">snow</button>
+                </div>
+                <div>    
+                    <select id="left">
+                            <option >Select Ninja</option>
+                            <option value="img/mikey.png">Mikey</option>
+                            <option value="img/raphael.png">Raphael</option>
+                            <option value="img/Donny.png">Donny</option>
+                            <option value="img/Leo.png">Leo</option>
+                        </select>
+                    
+                    
+                    <select id="right">
+                            <option >Select Ninja</option>
+                            <option value="img/mikey.png">Mikey</option>
+                            <option value="img/raphael.png">Raphael</option>
+                            <option value="img/Donny.png">Donny</option>
+                            <option value="img/Leo.png">Leo</option>
+                        </select>
+        
+                    </div>
+                    
+
+
+                    
+            </div>
+        
+            <img id="div1" >
+            <img id="div2" >
+
+
+        </div>
+        
+        
+
+
+
+
+    </body>
+</html>
